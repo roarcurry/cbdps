@@ -1,0 +1,181 @@
+
+<form name="patientFormForm" role="form" class="row ">
+
+	<div ng-repeat="leaf in curNode.leaf track by $index" class="form-group col-md-{{leaf.col ? leaf.col : 12}}" ng-class="leaf.required=='true' && saveClicked && leafInValid(patientForm[leaf.id])?'has-error':''" ng-show="!leaf.preID || patientForm[leaf.preID]==leaf.preValue || inArray(patientForm[leaf.preID],leaf.preValue) || patientForm[leaf.preID][patientForm[leaf.preID].length-1]=='1'" id="{{leaf.id}}">
+
+		<label  for="{{leaf.id}}" ng-if="leaf.name || (!leaf.name && !leaf.preID)" ng-class="{'title':leaf.type=='title'}" ng-style="{'color':leaf.color}" class="control-label">{{leaf.name ? leaf.name : '&nbsp;'}}</label><span style="color:red" ng-if="leaf.required=='true'"> *</span>
+
+		<button class="btn btn-primary yxxjk" ng-click="uploadModal()"
+				ng-if="(leaf.id=='yxxjg' && patientForm.yxxjg=='有') || (leaf.id=='yxxjg1st' && patientForm.yxxjg1st=='有') || (leaf.id=='yxxjg2nd' && patientForm.yxxjg2nd=='有') || (leaf.id=='yxxjg3rd' && patientForm.yxxjg3rd=='有') || (leaf.id=='yxxjg4th' && patientForm.yxxjg4th=='有') || (leaf.id=='yxxjg5th' && patientForm.yxxjg5th=='有') || (leaf.id=='yxxjg6th' && patientForm.yxxjg6th=='有') || (leaf.id=='yxxjg7th' && patientForm.yxxjg7th=='有') || (leaf.id=='yxxjg8th' && patientForm.yxxjg8th=='有') || (leaf.id=='yxxjg9th' && patientForm.yxxjg9th=='有') || (leaf.id=='yxxjg10th' && patientForm.yxxjg10th=='有') || (leaf.id=='yxxjg11th' && patientForm.yxxjg11th=='有') || (leaf.id=='yxxjg12th' && patientForm.yxxjg12th=='有')">
+			+影像学接口
+		</button>
+
+		<!--number-->
+		<input ng-if="leaf.type=='number'" class="form-control " name="{{leaf.id}}" type="number" ng-model="patientForm[leaf.id]" placeholder="{{leaf.value}}"/>
+
+		<!--text-->
+		<input ng-if="leaf.type=='text'" class="form-control " name="{{leaf.id}}" type="text" ng-model="patientForm[leaf.id]" placeholder="{{leaf.value}}"/>
+
+		<!--textarea-->
+		<textarea ng-if="leaf.type=='textarea'" class="form-control " name="{{leaf.id}}" rows="{{leaf.row ? leaf.row : 5}}" ng-model="patientForm[leaf.id]" placeholder="{{leaf.value}}" ></textarea>
+
+		<!--date类型-->
+		<input ng-if="leaf.type=='date'" class="form-control form_datetime" type="text" ng-model="patientForm[leaf.id]" ng-click="datetimePicker(leaf.id, $event)" />
+
+		<!--radio-->
+		<div ng-if="leaf.type=='radio'" class="form-control">
+			<label class="radio-inline" ng-repeat="value in leaf.value">
+				<input type="radio" ng-value="value" name="{{leaf.id}}" ng-model="patientForm[leaf.id]"/>
+				{{value}}
+			</label>
+		</div>
+
+		<!--checkbox-->
+		<div ng-if="leaf.type=='checkbox'" class="form-control"  name="checkbox">
+			<label class="checkbox-inline" ng-repeat="value in leaf.value track by $index">
+				<input type="checkbox" ng-true-value="'1'" ng-false-value="'0'" ng-model="patientForm[leaf.id][$index]"/>
+				{{value}}
+			</label>
+		</div>
+
+		<!--select-->
+		<select ng-if="leaf.type=='select'" ng-model="patientForm[leaf.id]" ng-options="value for value in leaf.value" class="form-control" ng-select="0"></select>
+
+
+		<!--multi-->
+		<div ng-if="leaf.type=='multi'">
+			{{leaf.value}}
+		</div>
+
+	</div>
+
+	<br/>
+
+	<div class="form-btn text-center">
+		<!--普通人员-->
+		<div ng-if="user.authority==0">
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+		<!--录入人员-->
+		<div ng-if="user.authority==1">
+			<!--编辑状态 && 审核未通过-->
+			<div ng-if="patient.status==0 || patient.status==-1">
+				<button class="btn btn-primary" ng-click="savePatientForm(true,curNode.leaf)">保存</button>
+				<button class="btn btn-primary" ng-click="backToList()">返回</button>
+			</div>
+			<!--审核中 && 审核通过-->
+			<div ng-if="patient.status==1 || patient.status==2">
+				<button class="btn btn-primary" ng-click="backToList()">返回</button>
+			</div>
+		</div>
+		<!--审核人员-->
+		<div ng-if="user.authority==2">
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+		<!--管理人员-->
+		<div ng-if="user.authority>=3">
+			<button class="btn btn-primary" ng-click="savePatientForm(true,curNode.leaf)">保存</button>
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+
+	</div>
+
+</form>
+<!-- /.form -->
+
+<!--baguetteBox-->
+<div class="baguetteBoxGallery" style="display: none">
+    <a class="lightbox" ng-repeat="image in images" ng-href="/data/{{params.moduleID}}/{{viewBinglihao}}/{{viewFolder}}/{{image}}">
+        <img ng-src="/data/{{params.moduleID}}/{{viewBinglihao}}/{{viewFolder}}/{{image}}" alt="{{image}}">
+    </a>
+</div>
+
+<!-- 影像学接口（Modal） -->
+<div class="modal fade" id="uploadModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<label>影像学接口：</label>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12 form-group">
+						<label>文件命名</label>
+						<input type="text" class="form-control" ng-model="uploadName" placeholder="未命名"/>
+					</div>
+					<div class="col-md-12 form-group">
+						<label>病情备注</label>
+						<textarea rows="5" class="form-control" ng-model="uploadDescription" placeholder="无"></textarea>
+					</div>
+					<div class="col-md-12 form-group">
+						<label>选择图像文件</label>
+						<input type="file" name="uploadImage" id="uploadImage_{{curNode.id}}" class="form-control" multiple accept="image/*" />
+					</div>
+					<div class="col-md-12 form-group">
+						<label>上传记录</label>
+						<table class="table table-striped table-bordered table-hover " id="{{curNode.id}}">
+							<thead>
+							<tr>
+								<th>名称</th>
+								<th>备注</th>
+								<th>时间</th>
+								<th>上传者</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr ng-repeat="uprec in uploadRecords track by $index" on-finish-render-filters>
+								<!--名称-->
+								<td>{{uprec.name}}</td>
+
+								<!--描述-->
+								<td>{{uprec.description}}</td>
+
+								<!--时间-->
+								<td>{{uprec.uptime | date:"yyyy-MM-dd HH:mm"}}</td>
+
+								<!--上传者-->
+								<td>{{uprec.upstaff}}</td>
+
+								<!--操作-->
+								<td>
+									<a ng-click="viewImage(params.moduleID, uprec.binglihao, uprec.folder)"  class="btn btn-primary btn-xs">查看</a>
+									<a ng-click="deleteUpload(params.moduleID, uprec.binglihao, uprec.folder)"  class="btn btn-primary btn-xs">删除</a>
+								</td>
+
+							</tr>
+
+							<!--<tr ng-if="!uploadRecords || uploadRecords.length==0">-->
+							<!--<td colspan="5"  style="text-align: center">没有匹配结果</td>-->
+							<!--</tr>-->
+
+							</tbody>
+						</table>
+						<!-- /.table-responsive -->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+<!-- 必填项（Modal） -->
+<div class="modal fade" id="requiredModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			</div>
+			<div class="modal-body text-center">
+				<strong>必填项未填，是否保存？</strong>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="savePatientForm(false,curNode.leaf)">保存</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>

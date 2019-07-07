@@ -1,0 +1,52 @@
+<div class="row">
+	<div class="col-lg-3 col-lg-offset-7 col-md-4 col-md-offset-6">
+		<div class="login-panel panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">用户登录</h3>
+			</div>
+			<div class="panel-body">
+
+				<form role="form" id="login" name="loginForm" ng-submit="submitForm()" class="">
+					<fieldset>
+						<!--错误提示-->
+						<div class="error login-error">{{loginResult.error}}</div>
+
+						<!--账号-->
+						<div class="form-group" ng-class="loginForm.username.$dirty && (loginForm.username.$error.required || loginForm.username.$error.pattern) ? 'has-error':''">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								<input class="form-control" placeholder="账号" name="username" type="text" ng-model="login.username" autocomplete="username" required="required" ng-pattern="/^[A-Za-z0-9_\-\u4e00-\u9fa5]+$/" autofocus>
+							</div>
+							<div class="error" ng-show="loginForm.username.$dirty && loginForm.username.$error.pattern">用户名不合法！</div>
+							<div class="error" ng-show="loginForm.username.$dirty && loginForm.username.$error.required">请填写此字段！</div>
+						</div>
+
+						<!--密码-->
+						<div class="form-group" ng-class="loginForm.password.$dirty && loginForm.password.$error.required ? 'has-error':''">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+								<input class="form-control" placeholder="密码" name="password" type="password" ng-model="login.password" autocomplete="current-password" required="required">
+							</div>
+							<div class="error" ng-show="loginForm.password.$dirty && loginForm.password.$error.required">请填写此字段！</div>
+						</div>
+
+						<!--记住我-->
+						<div class="checkbox">
+							<label>
+								<input name="remember" type="checkbox" value="remember" ng-model="login.remember" ng-init="login.remember=false">记住我
+							</label>
+						</div>
+
+						<!-- Change this to a button or input when using this as a form -->
+						<input class="btn btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid" value="登录">
+						<a class="btn  btn-primary btn-block" ui-sref="register">注册</a>
+						<br/>
+						<p class="tip">如忘记密码，请与管理员联系！</p>
+					</fieldset>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+

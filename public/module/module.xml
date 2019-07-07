@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+  <module>
+    <name>阑尾炎模块</name>
+    <id>appendicitis</id>
+    <hospital>华中科技大学附属同济医院</hospital>
+    <department>小儿外科</department>
+    <administrator>张三</administrator>
+    <description/>
+    <group_1>实验组</group_1>
+    <group_2>对照组</group_2>
+  </module>
+  <module>
+    <name>巨结肠手术治疗模块</name>
+    <id>megacolon</id>
+    <hospital>华中科技大学附属同济医院</hospital>
+    <department>小儿外科</department>
+    <administrator>李四</administrator>
+    <description/>
+    <group_1>新型吻合组</group_1>
+    <group_2>非新型吻合组</group_2>
+  </module>
+</root>

@@ -1,0 +1,159 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h5 class="page-header">
+            <i class="fa fa-home fa-fw"></i>
+            <a ui-sref="userManage">系统管理</a>
+            <i class="fa fa-angle-right  fa-fw"></i>
+            用户管理
+        </h5>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span style="line-height: 34px;">用户列表</span>
+                <div class="tools">
+                    <button ng-click="refresh()" class="btn btn-primary "><i class="fa fa-refresh" aria-hidden="true"></i> 刷新</button>
+                </div>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <table width="100%" class="table table-striped table-bordered table-hover " id="dataTables">
+                    <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                        <th>电话</th>
+                        <th>权限</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="userL in userList track by $index" ng-show="userL.authority!=9">
+                        <td>{{userL.username}}</td>
+                        <td>{{userL.email}}</td>
+                        <td>{{userL.phone}}</td>
+
+                        <td ng-if="userL.authority=='0'" style="font-weight: bold">普通人员</td>
+                        <td ng-if="userL.authority=='1'" style="font-weight: bold">录入人员</td>
+                        <td ng-if="userL.authority=='2'" style="font-weight: bold">审核人员</td>
+                        <td ng-if="userL.authority=='3'" style="font-weight: bold">管理人员</td>
+                        <td ng-if="userL.authority=='9'" style="font-weight: bold">超级管理员</td>
+
+                        <td ng-if="userL.status==0" style="font-weight: bold">审核中</td>
+                        <td ng-if="userL.status==1" style="color: rgb(60,118,61); font-weight: bold">审核通过</td>
+                        <td ng-if="userL.status==-1" style="color: rgb(169,68,66); font-weight: bold">审核未通过</td>
+
+                        <!--操作-->
+                        <td ng-if="user.username!=userL.username && user.authority>=3">
+                            <!--审核状态-->
+                            <a ng-click="userPass(userL.username)" ng-if="userL.status==0" class="btn btn-primary btn-xs">通过</a>
+                            <a ng-click="userFail(userL.username)" ng-if="userL.status==0" class="btn btn-primary btn-xs">否决</a>
+                            <a ng-click="deleteConfirm(userL.username)" ng-if="userL.status==0" class="btn btn-primary btn-xs">删除</a>
+                            <!--审核通过-->
+                            <a ng-click="resetConfirm(userL.username)" ng-if="userL.status==1" class="btn btn-primary btn-xs">重设密码</a>
+                            <a ng-click="changeConfirm(userL.username, userL.authority)" ng-if="userL.status==1" class="btn btn-primary btn-xs">更改权限</a>
+                            <a ng-click="deleteConfirm(userL.username)" ng-if="userL.status==1" class="btn btn-primary btn-xs">删除</a>
+                            <!--审核未通过-->
+                            <a ng-click="deleteConfirm(userL.username)" ng-if="userL.status==-1" class="btn btn-primary btn-xs">删除</a>
+                        </td>
+                        <td ng-if="user.username!=userL.username && user.authority<3">
+                            权限不够
+                        </td>
+                        <td ng-if="user.username==userL.username">
+                            自己
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<!-- 删除用户确认框（Modal） -->
+<div class="modal fade" id="deleteConfirm" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body text-center">
+                <h5>删除后将不可恢复，确认删除该用户？</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="deleteUser(deleteUsername)">
+                    确认
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 重设用户密码确认框（Modal） -->
+<div class="modal fade" id="resetConfirm" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body text-center">
+                <h5>将密码重设为"123456"，确认为该用户重设密码？</h5>
+                <p>密码重设后请尽快修改！</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="userReset(resetUsername)">
+                    确认
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 更改用户权限确认框（Modal） -->
+<div class="modal fade" id="changeConfirm" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body text-center">
+                <div class="form-group">
+                    <label for="changeAuthority">权限：</label>
+                    <select class="form-control" id="changeAuthority" name="changeAuthority" ng-model="changeAuthority" required>
+                        <option value="0">普通人员</option>
+                        <option value="1">录入人员</option>
+                        <option value="2">审核人员</option>
+                        <option value="3">管理人员</option>
+                        <option value="9">超级管理员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="userChange(changeUsername, changeAuthority)">
+                    确认
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

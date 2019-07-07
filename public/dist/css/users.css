@@ -1,0 +1,64 @@
+/* user */
+#users body {
+	overflow: hidden;
+}
+#users #wrapper {
+	height:100%;
+}
+#users .page-wrapper {
+	height: 100%;
+	background-image: url("../../images/login_bg.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+}
+
+/* modal */
+.modal-dialog{
+	width:auto;
+	max-width:420px;
+}
+.modal-header{
+	padding: 10px 15px;
+	border-top-left-radius : 6px;
+	border-top-right-radius : 6px;
+	background-color: rgb(245,245,245);
+}
+.modal-footer{
+	border: 0;
+	padding: 10px 15px;
+}
+.modal-body{
+	text-align: center;
+}
+.modal-body-title{
+	font-weight: bold;
+}
+
+.form-group.button{
+	margin: 0;
+}
+.btn{
+	float: none;
+}
+.panel-heading{
+	border-left: 3px solid #199ae2 !important;
+
+}
+.panel-title{
+}
+.login-error{
+}
+.error {
+	font-size: 12px;
+	color: rgb(169,68,66);
+	font-weight: bold;
+}
+.input-group-addon i{
+	width: 12px;
+	text-align: center;
+}
+.tip {
+	font-size: 12px;
+	color: #999;
+}

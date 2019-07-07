@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h5 class="page-header">
+            <i class="fa fa-home fa-fw"></i>
+            <a ui-sref="dataItemManage">数据项管理</a>
+            <i class="fa fa-angle-right  fa-fw"></i>
+            模块管理
+        </h5>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <!--panel-heading-->
+            <div class="panel-heading">
+                <h5 class="widget-title bigger lighter">
+                    <i class="ace-icon fa fa-table"></i> 修改模块
+                </h5>
+            </div>
+            <!--panel-body-->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12" style="padding:0px;">
+                        <div id="formEdit" class="ng-scope">
+                            <div class="widget-box widget-color-blue2 ng-scope">
+                                <div class="widget-header">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main">
+
+                                        <form name="moduleForm" class="form-horizontal col-sm-offset-2 ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+                                            <div class="form-group" ng-class="moduleForm.name.$dirty &amp;&amp; moduleForm.name.$invalid?'form-group has-error':'form-group'">
+                                                <label for="name" class="col-sm-2 control-label">模块名称</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="name" placeholder="模块名称" name="name" ng-model="module.name" required="">
+                                                    <span class="error ng-active ng-hide" ng-messages="moduleForm.name.$error" ng-show="moduleForm.name.$dirty &amp;&amp; moduleForm.name.$invalid">
+                                                        <!-- ngMessage: required --><div ng-message="required" class="ng-scope">必须填写</div>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-class="moduleForm.hospital.$dirty &amp;&amp; moduleForm.hospital.$invalid?'form-group has-error':'form-group'">
+                                                <label for="hospital" class="col-sm-2 control-label">牵头医院</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="hospital" placeholder="牵头医院" name="hospital" ng-model="module.hospital" required="">
+                                                    <div class="error ng-active ng-hide" ng-messages="moduleForm.hospital.$error" ng-show="moduleForm.hospital.$dirty &amp;&amp; moduleForm.hospital.$invalid">
+                                                        <!-- ngMessage: required --><div ng-message="required" class="ng-scope">必须填写</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-class="moduleForm.department.$dirty &amp;&amp; moduleForm.department.$invalid?'form-group has-error':'form-group'">
+                                                <label for="department" class="col-sm-2 control-label">所在科室</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="department" placeholder="所在科室" name="department" ng-model="module.department" required="">
+                                                    <div class="error ng-active ng-hide" ng-messages="moduleForm.department.$error" ng-show="moduleForm.department.$dirty &amp;&amp; moduleForm.department.$invalid">
+                                                        <!-- ngMessage: required --><div ng-message="required" class="ng-scope">必须填写</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-class="moduleForm.administrator.$dirty &amp;&amp; moduleForm.administrator.$invalid?'form-group has-error':'form-group'">
+                                                <label for="administrator" class="col-sm-2 control-label">负责人</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="administrator" placeholder="负责人" name="administrator" ng-model="module.administrator" required="">
+                                                    <div class="error ng-active ng-hide" ng-messages="moduleForm.administrator.$error" ng-show="moduleForm.administrator.$dirty &amp;&amp; moduleForm.administrator.$invalid">
+                                                        <!-- ngMessage: required --><div ng-message="required" class="ng-scope">必须填写</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-class="moduleForm.description.$dirty &amp;&amp; moduleForm.description.$invalid?'form-group has-error':'form-group'">
+                                                <label for="description" class="col-sm-2 control-label">模块描述</label>
+                                                <div class="col-sm-6">
+                                                    <textarea rows="5" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="description" placeholder="模块描述" name="description" ng-model="module.description" ></textarea>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-3 col-sm-2" style="text-align: right">
+                                                    <button class="btn btn-primary" ng-click="editModule(moduleForm.$invalid)">确定</button>
+                                                </div>
+                                                <div class="col-sm-1" style="text-align: right">
+                                                    <button class="btn btn-primary" ng-click="backToList()">返回</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

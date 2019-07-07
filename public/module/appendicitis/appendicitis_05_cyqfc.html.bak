@@ -1,0 +1,147 @@
+
+<form id="patientForm" role="form">
+
+	<div class="row">
+
+        <div class="col-md-12 form-group">
+            <label>体温（摄氏度）</label>
+            <input type="text" class="form-control" ng-model="patientForm.temperature"/>
+        </div>
+        <div class="col-md-12 form-group">
+            <label>白细胞（*10^9/L）</label>
+            <input type="text" class="form-control" ng-model="patientForm.whitecell"/>
+        </div>
+        <div class="col-md-12 form-group">
+            <label>中性粒细胞比</label>
+            <input type="text" class="form-control" ng-model="patientForm.zxlxbb"/>
+        </div>
+        <div class="col-md-12 form-group">
+            <label>CRP</label>
+            <input type="text" class="form-control" ng-model="patientForm.crp"/>
+        </div>
+        <div class="col-md-12 form-group">
+            <label>腹痛</label>
+            <div class="form-control" >
+                <label class="radio-inline">
+                    <input type="radio" ng-model="patientForm.futong" value="是"/>是
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="patientForm.futong" value="否"/>否
+                </label>
+            </div>
+        </div>
+        <div class="col-md-12 form-group">
+            <label>恶心呕吐</label>
+            <div class="form-control" >
+                <label class="radio-inline">
+                    <input type="radio" ng-model="patientForm.exoutu" value="是"/>是
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="patientForm.exoutu" value="否"/>否
+                </label>
+            </div>
+        </div>
+
+		<div class="col-md-12 form-group">
+			<label>影像学结果</label>
+			<select ng-model="patientForm.yxxjg" class="form-control">
+				<option value="有">有</option>
+				<option value="无">无</option>
+			</select>
+		</div>
+
+        <div ng-show="patientForm.yxxjg=='有'">
+            <div class="col-md-12 form-group">
+                <label>文件命名</label>
+                <input type="text" class="form-control" ng-model="uploadName" placeholder="未命名"/>
+            </div>
+            <div class="col-md-12 form-group">
+                <label>病情备注</label>
+                <textarea rows="5" class="form-control" ng-model="uploadDescription" placeholder="无"></textarea>
+            </div>
+            <div class="col-md-12 form-group">
+                <label>选择图像文件</label>
+                <input type="file" name="uploadImage" id="uploadImage_cyqfc" class="form-control" multiple accept="image/*" />
+            </div>
+            <div class="col-md-12 form-group">
+                <label>上传记录</label>
+                <table class="table table-striped table-bordered table-hover " id="cyqfc_dataTables">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>备注</th>
+                        <th>时间</th>
+                        <th>上传者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="uprec in uploadRecords track by $index" >
+                        <!--名称-->
+                        <td>{{uprec.name}}</td>
+
+                        <!--描述-->
+                        <td>{{uprec.description}}</td>
+
+                        <!--时间-->
+                        <td>{{uprec.uptime | date:"yyyy-MM-dd HH:mm"}}</td>
+
+                        <!--上传者-->
+                        <td>{{uprec.upstaff}}</td>
+
+                        <!--操作-->
+                        <td>
+                            <a ng-click="viewImage(params.moduleID, uprec.binglihao, uprec.folder)"  class="btn btn-primary btn-xs">查看</a>
+                            <a ng-click="deleteUpload(params.moduleID, uprec.binglihao, uprec.folder)"  class="btn btn-primary btn-xs">删除</a>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+                <!-- /.table-responsive -->
+            </div>
+        </div>
+
+	</div>
+
+
+
+	<div class="form-btn text-center">
+		<!--普通人员-->
+		<div ng-if="user.authority==0">
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+		<!--录入人员-->
+		<div ng-if="user.authority==1">
+			<!--编辑状态 && 审核未通过-->
+			<div ng-if="patient.status==0 || patient.status==-1">
+				<button class="btn btn-primary" ng-click="savePatientForm()">保存</button>
+				<button class="btn btn-primary" ng-click="backToList()">返回</button>
+			</div>
+			<!--审核中 && 审核通过-->
+			<div ng-if="patient.status==1 || patient.status==2">
+				<button class="btn btn-primary" ng-click="backToList()">返回</button>
+			</div>
+		</div>
+		<!--审核人员-->
+		<div ng-if="user.authority==2">
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+		<!--管理人员-->
+		<div ng-if="user.authority>=3">
+			<button class="btn btn-primary" ng-click="savePatientForm()">保存</button>
+			<button class="btn btn-primary" ng-click="backToList()">返回</button>
+		</div>
+
+	</div>
+
+</form>
+<!-- /.form -->
+
+<!--baguetteBox-->
+<div class="baguetteBoxGallery" style="display: none">
+	<a class="lightbox" ng-repeat="image in images" ng-href="/data/{{params.moduleID}}/{{viewBinglihao}}/{{viewFolder}}/{{image}}">
+		<img ng-src="/data/{{params.moduleID}}/{{viewBinglihao}}/{{viewFolder}}/{{image}}" alt="{{image}}">
+	</a>
+</div>
