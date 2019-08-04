@@ -21,6 +21,7 @@ router.post('/login', function(req, res, next) {
             res.json(json);
             return;
         }
+
         if(result.length>0){//查询到用户
             if(result[0].status==0){//用户未审核
                 var json = {'status':'0','msg':'登录失败！','error':'用户未审核！请与管理员联系！'};

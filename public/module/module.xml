@@ -20,4 +20,14 @@
     <group_1>新型吻合组</group_1>
     <group_2>非新型吻合组</group_2>
   </module>
+  <module>
+    <name>心形吻合模块</name>
+    <id>cardioidAnastomosis</id>
+    <hospital>华中科技大学附属同济医院</hospital>
+    <department>小儿外科</department>
+    <administrator>李四</administrator>
+    <description/>
+    <group_1>心形吻合组</group_1>
+    <group_2>非心形吻合组</group_2>
+  </module>
 </root>

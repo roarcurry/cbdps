@@ -93,6 +93,13 @@
         <id>appendicitis_01_jbzl</id>
         <type>form</type>
         <leaf>
+          <name>患者住院号</name>
+          <id>patient number</id>
+          <type>number</type>
+          <col>12</col>
+          <required>true</required>
+        </leaf>
+        <leaf>
           <name>姓名</name>
           <id>name</id>
           <col>4</col>

@@ -93,6 +93,13 @@
         <id>megacolon_01_jbzl</id>
         <type>form</type>
         <leaf>
+          <name>患者住院号</name>
+          <id>patient number</id>
+          <type>number</type>
+          <col>12</col>
+          <required>true</required>
+        </leaf>
+        <leaf>
           <name>姓名</name>
           <id>name</id>
           <col>4</col>
@@ -1726,32 +1733,6 @@
       </leaf>
 
       <leaf>
-        <name>直肠肛管测压检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Anorectal_manometry_date_oneMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Anorectal_manometry_des_oneMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>Anorectal_manometry_Diagnosis_oneMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
         <name>其他</name>
         <type>title</type>
       </leaf>
@@ -2049,32 +2030,6 @@
         <name>分组</name>
         <id>Acetylcholinesterase_staining_divide_threeMonth</id>
         <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>直肠肛管测压检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Anorectal_manometry_date_threeMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Anorectal_manometry_des_threeMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>Anorectal_manometry_Diagnosis_threeMonth</id>
-        <type>textarea</type>
         <col>12</col>
         <required>true</required>
       </leaf>
@@ -2382,32 +2337,6 @@
         <name>分组</name>
         <id>Acetylcholinesterase_staining_divide_sixMonth</id>
         <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>直肠肛管测压检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Anorectal_manometry_date_sixMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Anorectal_manometry_des_sixMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>Anorectal_manometry_Diagnosis_sixMonth</id>
-        <type>textarea</type>
         <col>12</col>
         <required>true</required>
       </leaf>
@@ -2728,32 +2657,6 @@
         <name>分组</name>
         <id>Acetylcholinesterase_staining_divide_twelveMonth</id>
         <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>直肠肛管测压检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Anorectal_manometry_date_twelveMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Anorectal_manometry_des_twelveMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>Anorectal_manometry_Diagnosis_twelveMonth</id>
-        <type>textarea</type>
         <col>12</col>
         <required>true</required>
       </leaf>
