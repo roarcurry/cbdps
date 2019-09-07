@@ -233,19 +233,37 @@ router.post('/userChange', function(req, res, next) {
         console.log(json);
         res.json(json);
     }else {//登录状态
-        var sql = 'UPDATE user SET authority="' + req.body.authority + '" WHERE username="' + req.body.username + '"';
-        db.query(sql, function (err, result) {
-            if (err) {
-                console.log(err);
-                var json = {'status': '0', 'msg': '更改用户权限失败！', 'error': err};
-                console.log(json);
-                res.json(json);
-                return;
-            }
-            var json = {'status': '1', 'msg': '更改用户权限成功！'};
-            console.log(json);
-            res.json(json);
-        });
+    	var type = req.body.type;
+	    var sql = '';
+	    switch(type){
+		    case 'authority':
+		    	sql += 'UPDATE user SET authority="' + req.body.param + '" WHERE username="' + req.body.username + '"';
+		    	break;
+		    case 'module':
+			    sql += 'UPDATE user SET module="' + req.body.param + '" WHERE username="' + req.body.username + '"';
+		    	break;
+		    default:
+
+	    }
+	    if(sql){
+		    db.query(sql, function (err, result) {
+			    if (err) {
+				    console.log(err);
+				    var json = {'status': '0', 'msg': '更改用户权限失败！', 'error': err};
+				    console.log(json);
+				    res.json(json);
+				    return;
+			    }
+			    var json = {'status': '1', 'msg': '更改用户权限成功！'};
+			    console.log(json);
+			    res.json(json);
+		    });
+	    }else{
+		    var json = {'status': '0', 'msg': '更改用户权限失败！', 'error': '类型错误！'};
+		    console.log(json);
+		    res.json(json);
+	    }
+
     }
 });
 

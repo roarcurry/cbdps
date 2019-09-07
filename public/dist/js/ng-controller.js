@@ -483,7 +483,11 @@ app.controller('patientListCtrl', function($scope, $state, $rootScope, $statePar
     //获取模块列表 project list
     dao.getModuleList(function(result){
         if(result.status=='1'){//成功
-            $scope.moduleList = result.data;
+        	if($rootScope.user.module !== 'all'){
+		        $scope.moduleList = [result.data[$rootScope.user.module]];
+	        }else{
+		        $scope.moduleList = result.data;
+	        }
             $scope.$apply();
 
             //获取patientList
@@ -2585,6 +2589,26 @@ app.controller('appendicitis_06_sfxx_Ctrl', function($scope, $stateParams, $root
 
 
 app.controller('userManageCtrl', function($scope, $state, $rootScope) {
+	//获取模块列表 module list
+	dao.getModuleList(function(result){
+		if(result.status=='1'){//成功
+			$scope.moduleList = result.data;
+			$scope.$apply();
+
+		}else if(result.status=='0'){//失败
+			//弹出警告框
+			$rootScope.alert = {};
+			$rootScope.alert.title = result.msg;
+			$rootScope.alert.content = result.err;
+			$rootScope.$apply();
+			$('#alertDanger').fadeIn(function () {
+				setTimeout(function(){
+					$('#alertDanger').fadeOut();
+				}, 3000);
+			});
+		}
+	});
+
     //获取 getUserList
     if($rootScope.user.authority>=3){
         dao.getUserList(function(result){
@@ -2782,8 +2806,8 @@ app.controller('userManageCtrl', function($scope, $state, $rootScope) {
         $scope.changeAuthority = authority;
     };
     //更改用户权限
-    $scope.userChange = function(username, authority){
-        dao.userChange(username, authority, function(result){
+    $scope.userChange = function(username, param, type){
+        dao.userChange(username, param, type, function(result){
             if(result.status=='1'){
                 $scope.refresh();
                 //
@@ -2811,6 +2835,13 @@ app.controller('userManageCtrl', function($scope, $state, $rootScope) {
             }
         });
     };
+
+	//更改模块
+	$scope.changeModule = function(username, module){
+		$('#changeModuleConfirm').modal('show');
+		$scope.changeUsername = username;
+		$scope.changeModule = module;
+	};
 });
 
 app.controller('messageCtrl', function($scope, $stateParams) {
@@ -2838,6 +2869,27 @@ users.controller('loginCtrl', function($scope, $state) {
 });
 
 users.controller('registerCtrl', function($scope, $state) {
+	//获取模块列表 module list
+	dao.getModuleList(function(result){
+		if(result.status=='1'){//成功
+			$scope.moduleList = result.data;
+			$scope.$apply();
+
+		}else if(result.status=='0'){//失败
+			//弹出警告框
+			// $rootScope.alert = {};
+			// $rootScope.alert.title = result.msg;
+			// $rootScope.alert.content = result.err;
+			// $rootScope.$apply();
+			// $('#alertDanger').fadeIn(function () {
+			// 	setTimeout(function(){
+			// 		$('#alertDanger').fadeOut();
+			// 	}, 3000);
+			// });
+			alert(result.msg);
+		}
+	});
+
 	$scope.submitForm = function(){
         utils.printInfo('register',$scope.register);
 
@@ -2850,6 +2902,7 @@ users.controller('registerCtrl', function($scope, $state) {
 			}else if(result.status==1){
 				//注册
 				var register = $scope.register;
+
 				dao.register(register, function(result){
                     if(result.status=='0') {
                         $scope.registerResult = result.msg;

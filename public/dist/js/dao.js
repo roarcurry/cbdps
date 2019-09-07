@@ -636,10 +636,11 @@ dao.prototype.userReset = function(username, callback){
 /*
 * userChange 更改用户权限
 * */
-dao.prototype.userChange = function(username, authority, callback){
+dao.prototype.userChange = function(username, param, type, callback){
     var data = {};
     data.username = username;
-    data.authority = authority;
+    data.param = param;
+    data.type = type;
     $.ajax({
         data: data,
         url: '/users/userChange',

@@ -31,6 +31,7 @@
                         <th>电话</th>
                         <th>权限</th>
                         <th>状态</th>
+                        <th>模块</th>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -50,6 +51,9 @@
                         <td ng-if="userL.status==1" style="color: rgb(60,118,61); font-weight: bold">审核通过</td>
                         <td ng-if="userL.status==-1" style="color: rgb(169,68,66); font-weight: bold">审核未通过</td>
 
+                        <td ng-if="userL.module=='all'">全部</td>
+                        <td ng-if="userL.module!='all'">{{moduleList[userL.module].name}}</td>
+
                         <!--操作-->
                         <td ng-if="user.username!=userL.username && user.authority>=3">
                             <!--审核状态-->
@@ -59,6 +63,7 @@
                             <!--审核通过-->
                             <a ng-click="resetConfirm(userL.username)" ng-if="userL.status==1" class="btn btn-primary btn-xs">重设密码</a>
                             <a ng-click="changeConfirm(userL.username, userL.authority)" ng-if="userL.status==1" class="btn btn-primary btn-xs">更改权限</a>
+                            <a ng-click="changeModule(userL.username, userL.module)" ng-if="userL.status==1 && userL.authority<3" class="btn btn-primary btn-xs">更改模块</a>
                             <a ng-click="deleteConfirm(userL.username)" ng-if="userL.status==1" class="btn btn-primary btn-xs">删除</a>
                             <!--审核未通过-->
                             <a ng-click="deleteConfirm(userL.username)" ng-if="userL.status==-1" class="btn btn-primary btn-xs">删除</a>
@@ -142,12 +147,40 @@
                         <option value="1">录入人员</option>
                         <option value="2">审核人员</option>
                         <option value="3">管理人员</option>
-                        <option value="9">超级管理员</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="userChange(changeUsername, changeAuthority)">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="userChange(changeUsername, changeAuthority, 'authority')">
+                    确认
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 更改模块（Modal） -->
+<div class="modal fade" id="changeModuleConfirm" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body text-center">
+                <div class="form-group">
+                    <label for="changeModule">模块：</label>
+                    <select class="form-control" id="changeModule" name="changeModule" ng-model="changeModule" required>
+                        <option ng-repeat="module in moduleList track by $index" value="{{$index}}">{{moduleList[$index].name}}</option>
+                        <option value="all">全部</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="userChange(changeUsername, changeModule, 'module')">
                     确认
                 </button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">

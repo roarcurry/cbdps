@@ -12,23 +12,17 @@ var rimraf = require('rimraf');
 
 //项目管理project
 router.post('/getModuleList', function(req, res, next) {
-    if (!req.session.user) {//非登录状态
-        var json = {'status':'0','msg':'获取模块列表失败！','err':'用户未登录！'};
-        console.log(json);
-        res.json(json);
-    }else{//登录状态
-        xml.getModuleList(function(result){
-            if(result.status == 0){
-                var json = {'status':'0','msg':'获取模块列表失败！','err':result.error};
-                console.log(json);
-                res.json(json);
-            }else if(result.status == 1){
-                var json = {'status':'1','msg':'获取模块列表成功！','data':result.data};
-                console.log({'status':'1','msg':'获取模块列表成功！'});
-                res.json(json);
-            }
-        });
-    }
+	xml.getModuleList(function(result){
+		if(result.status == 0){
+			var json = {'status':'0','msg':'获取模块列表失败！','err':result.error};
+			console.log(json);
+			res.json(json);
+		}else if(result.status == 1){
+			var json = {'status':'1','msg':'获取模块列表成功！','data':result.data};
+			console.log({'status':'1','msg':'获取模块列表成功！'});
+			res.json(json);
+		}
+	});
 });
 router.post('/newModule', function(req, res, next) {
     if (!req.session.user) {//非登录状态
@@ -179,6 +173,14 @@ router.post('/newPatient', function(req, res, next) {
                     res.json(json);
                     return;
                 }
+                // 初始化基本资料
+	            var initSql = 'INSERT INTO ' + moduleID + '_01_jbzl SET binglihao=' + binglihao + ', name="' + patient.name + '", sex="' + patient.sex + '", age="' + patient.age + '"';
+	            db.query(initSql, function(err, result) {
+		            if (err) {
+			            console.log(err);
+			            return;
+		            }
+	            });
 
                 //插入操作记录
                 var recordsql = 'INSERT INTO ' + moduleID + '_records SET binglihao=' + result.insertId + ',opstaff="' + req.session.user.username + '",optype="0",optime="' + utils.getDate() + '",addtime="' + utils.getDate() + '"';

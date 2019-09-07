@@ -842,7 +842,7 @@
                 <type>checkbox</type>
                 <value>心形吻合</value>
                 <value>Soave吻合</value>
-                <value>Duhame吻合</value>
+                <value>Duhamel吻合</value>
                 <value>Swenson吻合</value>
                 <value>Rehbein吻合</value>
                 <value>其他</value>
@@ -1082,18 +1082,36 @@
                 <type>text</type>
                 <col>12</col>
             </leaf>
-            <leaf>
-                <name>RAIR波峰幅度(mmHg)</name>
-                <id>RAIRPeakAmplitude_oneMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>RAIR波峰频率(/min)</name>
-                <id>RAIRPeakFrequency_oneMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
+			<leaf>
+				<name>最大压榨压(mmHg)</name>
+				<id>maxPressPressure_oneMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次感觉压(mmHg)</name>
+				<id>firstSensoryPressure_oneMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次排便压(mmHg)</name>
+				<id>firstDefecationPressure_oneMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>强烈排便压(mmHg)</name>
+				<id>strongDefecationPressure_oneMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>最大容受压(mmHg)</name>
+				<id>maxCompressionPressing_oneMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
 
             <leaf>
                 <name>再入院/再手术</name>
@@ -1137,57 +1155,13 @@
             </leaf>
 
 
-            <leaf>
-                <name>组织病理学检查</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>Acetylcholinesterase_staining_date_oneMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>Acetylcholinesterase_staining_des_oneMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>分组</name>
-                <id>Acetylcholinesterase_staining_divide_oneMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-
-            <leaf>
-                <name>其他</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>other_date_oneMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>other_des_oneMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>诊断</name>
-                <id>other_Diagnosis_oneMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
+			<leaf>
+				<name>其他</name>
+				<id>other_oneMonth</id>
+				<type>textarea</type>
+				<col>12</col>
+				<required>true</required>
+			</leaf>
         </children>
 
         <children>
@@ -1370,18 +1344,36 @@
                 <type>text</type>
                 <col>12</col>
             </leaf>
-            <leaf>
-                <name>RAIR波峰幅度(mmHg)</name>
-                <id>RAIRPeakAmplitude_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>RAIR波峰频率(/min)</name>
-                <id>RAIRPeakFrequency_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
+			<leaf>
+				<name>最大压榨压(mmHg)</name>
+				<id>maxPressPressure_threeMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次感觉压(mmHg)</name>
+				<id>firstSensoryPressure_threeMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次排便压(mmHg)</name>
+				<id>firstDefecationPressure_threeMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>强烈排便压(mmHg)</name>
+				<id>strongDefecationPressure_threeMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>最大容受压(mmHg)</name>
+				<id>maxCompressionPressing_threeMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
 
             <leaf>
                 <name>再入院/再手术</name>
@@ -1425,57 +1417,13 @@
             </leaf>
 
 
-            <leaf>
-                <name>组织病理学检查</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>Acetylcholinesterase_staining_date_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>Acetylcholinesterase_staining_des_threeMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>分组</name>
-                <id>Acetylcholinesterase_staining_divide_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-
-            <leaf>
-                <name>其他</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>other_date_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>other_des_threeMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>诊断</name>
-                <id>other_Diagnosis_threeMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
+			<leaf>
+				<name>其他</name>
+				<id>other_threeMonth</id>
+				<type>textarea</type>
+				<col>12</col>
+				<required>true</required>
+			</leaf>
         </children>
 
         <children>
@@ -1658,18 +1606,36 @@
                 <type>text</type>
                 <col>12</col>
             </leaf>
-            <leaf>
-                <name>RAIR波峰幅度(mmHg)</name>
-                <id>RAIRPeakAmplitude_sixMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>RAIR波峰频率(/min)</name>
-                <id>RAIRPeakFrequency_sixMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
+			<leaf>
+				<name>最大压榨压(mmHg)</name>
+				<id>maxPressPressure_sixMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次感觉压(mmHg)</name>
+				<id>firstSensoryPressure_sixMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次排便压(mmHg)</name>
+				<id>firstDefecationPressure_sixMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>强烈排便压(mmHg)</name>
+				<id>strongDefecationPressure_sixMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>最大容受压(mmHg)</name>
+				<id>maxCompressionPressing_sixMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
 
             <leaf>
                 <name>再入院/再手术</name>
@@ -1712,59 +1678,15 @@
                 <preValue>有</preValue>
             </leaf>
 
-           
 
-            <leaf>
-                <name>组织病理学检查</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>Acetylcholinesterase_staining_date_sixMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>Acetylcholinesterase_staining_des_sixMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>分组</name>
-                <id>Acetylcholinesterase_staining_divide_sixMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
 
-            <leaf>
-                <name>其他</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>other_date_sixMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>other_des_sixMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>诊断</name>
-                <id>other_Diagnosis_sixMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
+			<leaf>
+				<name>其他</name>
+				<id>other_sixMonth</id>
+				<type>textarea</type>
+				<col>12</col>
+				<required>true</required>
+			</leaf>
         </children>
 
         <children>
@@ -1947,18 +1869,36 @@
                 <type>text</type>
                 <col>12</col>
             </leaf>
-            <leaf>
-                <name>RAIR波峰幅度(mmHg)</name>
-                <id>RAIRPeakAmplitude_twelveMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>RAIR波峰频率(/min)</name>
-                <id>RAIRPeakFrequency_twelveMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
+			<leaf>
+				<name>最大压榨压(mmHg)</name>
+				<id>maxPressPressure_twelveMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次感觉压(mmHg)</name>
+				<id>firstSensoryPressure_twelveMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>初次排便压(mmHg)</name>
+				<id>firstDefecationPressure_twelveMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>强烈排便压(mmHg)</name>
+				<id>strongDefecationPressure_twelveMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
+			<leaf>
+				<name>最大容受压(mmHg)</name>
+				<id>maxCompressionPressing_twelveMonth</id>
+				<type>text</type>
+				<col>12</col>
+			</leaf>
 
             <leaf>
                 <name>再入院/再手术</name>
@@ -2001,59 +1941,15 @@
                 <preValue>有</preValue>
             </leaf>
 
-           
 
-            <leaf>
-                <name>组织病理学检查</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>Acetylcholinesterase_staining_date_twelveMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>Acetylcholinesterase_staining_des_twelveMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>分组</name>
-                <id>Acetylcholinesterase_staining_divide_twelveMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
 
-            <leaf>
-                <name>其他</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>检查日期（年/月/日）</name>
-                <id>other_date_twelveMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>描述</name>
-                <id>other_des_twelveMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name>诊断</name>
-                <id>other_Diagnosis_twelveMonth</id>
-                <type>textarea</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
+			<leaf>
+				<name>其他</name>
+				<id>other_twelveMonth</id>
+				<type>textarea</type>
+				<col>12</col>
+				<required>true</required>
+			</leaf>
         </children>
     </node>
 

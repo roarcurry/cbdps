@@ -1228,10 +1228,10 @@
         <id>Anastomosis_mode</id>
         <type>checkbox</type>
         <value>心形吻合</value>
-        <value>soave吻合</value>
-        <value>duhame吻合</value>
-        <value>swenson吻合</value>
-        <value>rehbein吻合</value>
+	  	<value>Soave吻合</value>
+	  	<value>Duhamel吻合</value>
+	  	<value>Swenson吻合</value>
+	  	<value>Rehbein吻合</value>
         <value>其他</value>
         <col>12</col>
         <required>true</required>
@@ -1706,56 +1706,14 @@
         <required>true</required>
       </leaf>
 
-      <leaf>
-        <name>组织病理学检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Acetylcholinesterase_staining_date_oneMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Acetylcholinesterase_staining_des_oneMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>分组</name>
-        <id>Acetylcholinesterase_staining_divide_oneMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
+
 
       <leaf>
         <name>其他</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>other_date_oneMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>other_des_oneMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>other_Diagnosis_oneMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
+	  	<id>other_oneMonth</id>
+		<type>textarea</type>
+		<col>12</col>
+		<required>true</required>
       </leaf>
     </children>
 
@@ -2008,57 +1966,13 @@
         <required>true</required>
       </leaf>
 
-      <leaf>
-        <name>组织病理学检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Acetylcholinesterase_staining_date_threeMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Acetylcholinesterase_staining_des_threeMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>分组</name>
-        <id>Acetylcholinesterase_staining_divide_threeMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>其他</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>other_date_threeMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>other_des_threeMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>other_Diagnosis_threeMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
+		<leaf>
+			<name>其他</name>
+			<id>other_threeMonth</id>
+			<type>textarea</type>
+			<col>12</col>
+			<required>true</required>
+		</leaf>
     </children>
 
     <children>
@@ -2315,57 +2229,13 @@
         <required>true</required>
       </leaf>
 
-      <leaf>
-        <name>组织病理学检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Acetylcholinesterase_staining_date_sixMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Acetylcholinesterase_staining_des_sixMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>分组</name>
-        <id>Acetylcholinesterase_staining_divide_sixMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>其他</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>other_date_sixMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>other_des_sixMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>other_Diagnosis_sixMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
+		<leaf>
+			<name>其他</name>
+			<id>other_sixMonth</id>
+			<type>textarea</type>
+			<col>12</col>
+			<required>true</required>
+		</leaf>
     </children>
 
     <children>
@@ -2635,57 +2505,13 @@
         <required>true</required>
       </leaf>
 
-      <leaf>
-        <name>组织病理学检查</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>Acetylcholinesterase_staining_date_twelveMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>Acetylcholinesterase_staining_des_twelveMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>分组</name>
-        <id>Acetylcholinesterase_staining_divide_twelveMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-
-      <leaf>
-        <name>其他</name>
-        <type>title</type>
-      </leaf>
-      <leaf>
-        <name>检查日期（年/月/日）</name>
-        <id>other_date_twelveMonth</id>
-        <type>text</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>描述</name>
-        <id>other_des_twelveMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
-      <leaf>
-        <name>诊断</name>
-        <id>other_Diagnosis_twelveMonth</id>
-        <type>textarea</type>
-        <col>12</col>
-        <required>true</required>
-      </leaf>
+		<leaf>
+			<name>其他</name>
+			<id>other_twelveMonth</id>
+			<type>textarea</type>
+			<col>12</col>
+			<required>true</required>
+		</leaf>
     </children>
   </node>
 
