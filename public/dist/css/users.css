@@ -1,17 +1,30 @@
 /* user */
 #users body {
 	overflow: hidden;
+	overflow-y: auto;
+    background-image: url("../../images/login_bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment:fixed;
 }
 #users #wrapper {
 	height:100%;
 }
 #users .page-wrapper {
-	height: 100%;
-	background-image: url("../../images/login_bg.png");
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: cover;
+	min-height: calc(100% - 101px);
+
 }
+
+
+#users .login-panel {
+    margin-top: 25%;
+}
+.footer {
+    display: block;
+}
+
+
 
 /* modal */
 .modal-dialog{
