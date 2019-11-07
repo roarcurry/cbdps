@@ -957,49 +957,6 @@
                 <preValue>其他</preValue>
             </leaf>
             <leaf>
-                <name>目前平均每日大便次数</name>
-                <id>AverageDailyStoolCount_after</id>
-                <type>select</type>
-                <value>小于1次</value>
-                <value>1-3次</value>
-                <value>大于3次</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前大便性状</name>
-                <id>CurrentStoolCharacteristics_after</id>
-                <type>select</type>
-                <value>稀水样便</value>
-                <value>成型软便</value>
-                <value>干结大便</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后是否仍有排便困难</name>
-                <id>IsDefecationStillDifficult_after</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前排大便前是否有意识</name>
-                <id>DefecationHasConsciousness_after</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前控制大便的能力</name>
-                <id>AbilityToControlStool_after</id>
-                <type>select</type>
-                <value>在任何情况下控制的很好，没有意外发生</value>
-                <value>在意外的情况下，偶尔控制不住排便排气</value>
-                <value>不能控制或经常出现意外</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
                 <name>术后肠炎发作次数</name>
                 <id>NumberOfEpisodesOfEnteritis_after</id>
                 <type>select</type>
@@ -1007,57 +964,6 @@
                 <value>1-3次</value>
                 <value>>3次</value>
                 <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后其他并发症</name>
-                <id>OtherComplications_afterOneMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>OtherComplications_afterOneMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>OtherComplications_afterOneMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>术后是否有排便训练</name>
-                <id>DefecationTraining_afterOneMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>DefecationTraining_afterOneMonth_select</id>
-                <type>select</type>
-                <value>扩肛</value>
-                <value>洗肠</value>
-                <value>口服益生菌</value>
-                <value>心理咨询</value>
-                <value>其他</value>
-                <col>12</col>
-                <preID>DefecationTraining_afterOneMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>排便训练时间</name>
-                <id>DefecationTrainingTime_afterOneMonth_select</id>
-                <type>select</type>
-                <value>小于1个月</value>
-                <value>1-3个月</value>
-                <value>3-6个月</value>
-                <value>大于6个月</value>
-                <col>12</col>
-                <preID>DefecationTraining_afterOneMonth</preID>
-                <preValue>有</preValue>
             </leaf>
 
             <leaf>
@@ -1283,49 +1189,6 @@
                 <preValue>其他</preValue>
             </leaf>
             <leaf>
-                <name>目前平均每日大便次数</name>
-                <id>AverageDailyStoolCount_threeMonth</id>
-                <type>select</type>
-                <value>小于1次</value>
-                <value>1-3次</value>
-                <value>大于3次</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前大便性状</name>
-                <id>CurrentStoolCharacteristics_threeMonth</id>
-                <type>select</type>
-                <value>稀水样便</value>
-                <value>成型软便</value>
-                <value>干结大便</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后是否仍有排便困难</name>
-                <id>IsDefecationStillDifficult_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前排大便前是否有意识</name>
-                <id>DefecationHasConsciousness_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前控制大便的能力</name>
-                <id>AbilityToControlStool_threeMonth</id>
-                <type>select</type>
-                <value>在任何情况下控制的很好，没有意外发生</value>
-                <value>在意外的情况下，偶尔控制不住排便排气</value>
-                <value>不能控制或经常出现意外</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
                 <name>术后肠炎发作次数</name>
                 <id>NumberOfEpisodesOfEnteritis_threeMonth</id>
                 <type>select</type>
@@ -1333,57 +1196,6 @@
                 <value>1-3次</value>
                 <value>>3次</value>
                 <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后其他并发症</name>
-                <id>OtherComplications_afterThreeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>OtherComplications_afterThreeMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>OtherComplications_afterThreeMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>术后是否有排便训练</name>
-                <id>DefecationTraining_afterThreeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>DefecationTraining_afterThreeMonth_select</id>
-                <type>select</type>
-                <value>扩肛</value>
-                <value>洗肠</value>
-                <value>口服益生菌</value>
-                <value>心理咨询</value>
-                <value>其他</value>
-                <col>12</col>
-                <preID>DefecationTraining_afterThreeMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>排便训练时间</name>
-                <id>DefecationTrainingTime_afterThreeMonth_select</id>
-                <type>select</type>
-                <value>小于1个月</value>
-                <value>1-3个月</value>
-                <value>3-6个月</value>
-                <value>大于6个月</value>
-                <col>12</col>
-                <preID>DefecationTraining_afterThreeMonth</preID>
-                <preValue>有</preValue>
             </leaf>
 
             <leaf>
@@ -1609,49 +1421,6 @@
                 <preValue>其他</preValue>
             </leaf>
             <leaf>
-                <name>目前平均每日大便次数</name>
-                <id>AverageDailyStoolCount_sixMonth</id>
-                <type>select</type>
-                <value>小于1次</value>
-                <value>1-3次</value>
-                <value>大于3次</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前大便性状</name>
-                <id>CurrentStoolCharacteristics_sixMonth</id>
-                <type>select</type>
-                <value>稀水样便</value>
-                <value>成型软便</value>
-                <value>干结大便</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后是否仍有排便困难</name>
-                <id>IsDefecationStillDifficult_sixMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前排大便前是否有意识</name>
-                <id>DefecationHasConsciousness_sixMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前控制大便的能力</name>
-                <id>AbilityToControlStool_sixMonth</id>
-                <type>select</type>
-                <value>在任何情况下控制的很好，没有意外发生</value>
-                <value>在意外的情况下，偶尔控制不住排便排气</value>
-                <value>不能控制或经常出现意外</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
                 <name>术后肠炎发作次数</name>
                 <id>NumberOfEpisodesOfEnteritis_sixMonth</id>
                 <type>select</type>
@@ -1659,57 +1428,6 @@
                 <value>1-3次</value>
                 <value>>3次</value>
                 <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后其他并发症</name>
-                <id>OtherComplications_sixMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>OtherComplications_sixMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>OtherComplications_sixMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>术后是否有排便训练</name>
-                <id>DefecationTraining_sixMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>DefecationTraining_sixMonth_select</id>
-                <type>select</type>
-                <value>扩肛</value>
-                <value>洗肠</value>
-                <value>口服益生菌</value>
-                <value>心理咨询</value>
-                <value>其他</value>
-                <col>12</col>
-                <preID>DefecationTraining_sixMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>排便训练时间</name>
-                <id>DefecationTrainingTime_sixMonth_select</id>
-                <type>select</type>
-                <value>小于1个月</value>
-                <value>1-3个月</value>
-                <value>3-6个月</value>
-                <value>大于6个月</value>
-                <col>12</col>
-                <preID>DefecationTraining_sixMonth</preID>
-                <preValue>有</preValue>
             </leaf>
 
             <leaf>
@@ -1936,49 +1654,6 @@
                 <preValue>其他</preValue>
             </leaf>
             <leaf>
-                <name>目前平均每日大便次数</name>
-                <id>AverageDailyStoolCount_twelveMonth</id>
-                <type>select</type>
-                <value>小于1次</value>
-                <value>1-3次</value>
-                <value>大于3次</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前大便性状</name>
-                <id>CurrentStoolCharacteristics_twelveMonth</id>
-                <type>select</type>
-                <value>稀水样便</value>
-                <value>成型软便</value>
-                <value>干结大便</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后是否仍有排便困难</name>
-                <id>IsDefecationStillDifficult_twelveMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前排大便前是否有意识</name>
-                <id>DefecationHasConsciousness_twelveMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>目前控制大便的能力</name>
-                <id>AbilityToControlStool_twelveMonth</id>
-                <type>select</type>
-                <value>在任何情况下控制的很好，没有意外发生</value>
-                <value>在意外的情况下，偶尔控制不住排便排气</value>
-                <value>不能控制或经常出现意外</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
                 <name>术后肠炎发作次数</name>
                 <id>NumberOfEpisodesOfEnteritis_twelveMonth</id>
                 <type>select</type>
@@ -1986,57 +1661,6 @@
                 <value>1-3次</value>
                 <value>>3次</value>
                 <col>12</col>
-            </leaf>
-            <leaf>
-                <name>术后其他并发症</name>
-                <id>OtherComplications_twelveMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>OtherComplications_twelveMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>OtherComplications_twelveMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>术后是否有排便训练</name>
-                <id>DefecationTraining_twelveMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>DefecationTraining_twelveMonth_select</id>
-                <type>select</type>
-                <value>扩肛</value>
-                <value>洗肠</value>
-                <value>口服益生菌</value>
-                <value>心理咨询</value>
-                <value>其他</value>
-                <col>12</col>
-                <preID>DefecationTraining_twelveMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-            <leaf>
-                <name>排便训练时间</name>
-                <id>DefecationTrainingTime_twelveMonth_select</id>
-                <type>select</type>
-                <value>小于1个月</value>
-                <value>1-3个月</value>
-                <value>3-6个月</value>
-                <value>大于6个月</value>
-                <col>12</col>
-                <preID>DefecationTraining_twelveMonth</preID>
-                <preValue>有</preValue>
             </leaf>
 
             <leaf>
