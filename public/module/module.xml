@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
   <module>
-    <name>阑尾炎模块</name>
+    <name>阑尾炎ERAS模块</name>
     <id>appendicitis</id>
     <hospital>华中科技大学附属同济医院</hospital>
     <department>小儿外科</department>
@@ -11,7 +11,7 @@
     <group_2>对照组</group_2>
   </module>
   <module>
-    <name>巨结肠手术治疗模块</name>
+    <name>巨结肠围术期营养模块</name>
     <id>megacolon</id>
     <hospital>华中科技大学附属同济医院</hospital>
     <department>小儿外科</department>
@@ -21,7 +21,7 @@
     <group_2>非新型吻合组</group_2>
   </module>
   <module>
-    <name>心形吻合模块</name>
+    <name>巨结肠心形吻合模块</name>
     <id>cardioidAnastomosis</id>
     <hospital>华中科技大学附属同济医院</hospital>
     <department>小儿外科</department>
