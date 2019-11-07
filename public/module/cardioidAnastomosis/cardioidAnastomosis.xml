@@ -913,7 +913,7 @@
             </leaf>
 
             <leaf>
-                <name>年龄（岁）</name>
+                <name>年龄（）岁</name>
                 <id>age_after</id>
                 <type>text</type>
                 <col>12</col>
@@ -1005,7 +1005,7 @@
                 <type>select</type>
                 <value>0次</value>
                 <value>1-3次</value>
-                <value>大于3次</value>
+                <value>>3次</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1058,6 +1058,70 @@
                 <col>12</col>
                 <preID>DefecationTraining_afterOneMonth</preID>
                 <preValue>有</preValue>
+            </leaf>
+
+            <leaf>
+                <name>肠功能指数（Bowel function score）</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>控制大便的能力</name>
+                <id>defecateControl_1month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>偶尔无法控制，1周小于1次</value>
+                <value>经常无法控制，1周大于1次</value>
+                <value>完全无法控制</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便前是否有意识</name>
+                <id>defecateWithConsciousness_1month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>大多数时候有意识</value>
+                <value>大多数时候无意识</value>
+                <value>完全无意识</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>污粪</name>
+                <id>dirtyManure_1month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>每周小于1次</value>
+                <value>每周大于1次</value>
+                <value>每天都有</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便频率</name>
+                <id>dirtyFrequency_1month</id>
+                <type>select</type>
+                <value>每隔一天至一天两次</value>
+                <value>每天大于两次</value>
+                <value>大于两天一次</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>便秘</name>
+                <id>astriction_1month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>有便秘，可以通过饮食调整</value>
+                <value>有便秘，可以通过药物调整</value>
+                <value>有便秘，需要洗肠</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>社会问题</name>
+                <id>socialProblem_1month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>身上有异味</value>
+                <value>社会活动受限</value>
+                <value>严重的心理问题</value>
+                <col>12</col>
             </leaf>
 
             <leaf>
@@ -1175,7 +1239,7 @@
             </leaf>
 
             <leaf>
-                <name>年龄（岁）</name>
+                <name>年龄（）岁</name>
                 <id>age_threeMonth</id>
                 <type>text</type>
                 <col>12</col>
@@ -1267,7 +1331,7 @@
                 <type>select</type>
                 <value>0次</value>
                 <value>1-3次</value>
-                <value>大于3次</value>
+                <value>>3次</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1320,6 +1384,70 @@
                 <col>12</col>
                 <preID>DefecationTraining_afterThreeMonth</preID>
                 <preValue>有</preValue>
+            </leaf>
+
+            <leaf>
+                <name>肠功能指数（Bowel function score）</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>控制大便的能力</name>
+                <id>defecateControl_3month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>偶尔无法控制，1周小于1次</value>
+                <value>经常无法控制，1周大于1次</value>
+                <value>完全无法控制</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便前是否有意识</name>
+                <id>defecateWithConsciousness_3month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>大多数时候有意识</value>
+                <value>大多数时候无意识</value>
+                <value>完全无意识</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>污粪</name>
+                <id>dirtyManure_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>每周小于1次</value>
+                <value>每周大于1次</value>
+                <value>每天都有</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便频率</name>
+                <id>dirtyFrequency_3month</id>
+                <type>select</type>
+                <value>每隔一天至一天两次</value>
+                <value>每天大于两次</value>
+                <value>大于两天一次</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>便秘</name>
+                <id>astriction_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>有便秘，可以通过饮食调整</value>
+                <value>有便秘，可以通过药物调整</value>
+                <value>有便秘，需要洗肠</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>社会问题</name>
+                <id>socialProblem_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>身上有异味</value>
+                <value>社会活动受限</value>
+                <value>严重的心理问题</value>
+                <col>12</col>
             </leaf>
 
             <leaf>
@@ -1437,7 +1565,7 @@
             </leaf>
 
             <leaf>
-                <name>年龄（岁）</name>
+                <name>年龄（）岁</name>
                 <id>age_sixMonth</id>
                 <type>text</type>
                 <col>12</col>
@@ -1529,7 +1657,7 @@
                 <type>select</type>
                 <value>0次</value>
                 <value>1-3次</value>
-                <value>大于3次</value>
+                <value>>3次</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1582,6 +1710,70 @@
                 <col>12</col>
                 <preID>DefecationTraining_sixMonth</preID>
                 <preValue>有</preValue>
+            </leaf>
+
+            <leaf>
+                <name>肠功能指数（Bowel function score）</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>控制大便的能力</name>
+                <id>defecateControl_6month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>偶尔无法控制，1周小于1次</value>
+                <value>经常无法控制，1周大于1次</value>
+                <value>完全无法控制</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便前是否有意识</name>
+                <id>defecateWithConsciousness_6month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>大多数时候有意识</value>
+                <value>大多数时候无意识</value>
+                <value>完全无意识</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>污粪</name>
+                <id>dirtyManure_6month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>每周小于1次</value>
+                <value>每周大于1次</value>
+                <value>每天都有</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便频率</name>
+                <id>dirtyFrequency_6month</id>
+                <type>select</type>
+                <value>每隔一天至一天两次</value>
+                <value>每天大于两次</value>
+                <value>大于两天一次</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>便秘</name>
+                <id>astriction_6month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>有便秘，可以通过饮食调整</value>
+                <value>有便秘，可以通过药物调整</value>
+                <value>有便秘，需要洗肠</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>社会问题</name>
+                <id>socialProblem_6month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>身上有异味</value>
+                <value>社会活动受限</value>
+                <value>严重的心理问题</value>
+                <col>12</col>
             </leaf>
 
             <leaf>
@@ -1700,7 +1892,7 @@
             </leaf>
 
             <leaf>
-                <name>年龄（岁）</name>
+                <name>年龄（）岁</name>
                 <id>age_twelveMonth</id>
                 <type>text</type>
                 <col>12</col>
@@ -1792,7 +1984,7 @@
                 <type>select</type>
                 <value>0次</value>
                 <value>1-3次</value>
-                <value>大于3次</value>
+                <value>>3次</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1845,6 +2037,70 @@
                 <col>12</col>
                 <preID>DefecationTraining_twelveMonth</preID>
                 <preValue>有</preValue>
+            </leaf>
+
+            <leaf>
+                <name>肠功能指数（Bowel function score）</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>控制大便的能力</name>
+                <id>defecateControl_12month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>偶尔无法控制，1周小于1次</value>
+                <value>经常无法控制，1周大于1次</value>
+                <value>完全无法控制</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便前是否有意识</name>
+                <id>defecateWithConsciousness_12month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>大多数时候有意识</value>
+                <value>大多数时候无意识</value>
+                <value>完全无意识</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>污粪</name>
+                <id>dirtyManure_12month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>每周小于1次</value>
+                <value>每周大于1次</value>
+                <value>每天都有</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便频率</name>
+                <id>dirtyFrequency_12month</id>
+                <type>select</type>
+                <value>每隔一天至一天两次</value>
+                <value>每天大于两次</value>
+                <value>大于两天一次</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>便秘</name>
+                <id>astriction_12month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>有便秘，可以通过饮食调整</value>
+                <value>有便秘，可以通过药物调整</value>
+                <value>有便秘，需要洗肠</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>社会问题</name>
+                <id>socialProblem_12month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>身上有异味</value>
+                <value>社会活动受限</value>
+                <value>严重的心理问题</value>
+                <col>12</col>
             </leaf>
 
             <leaf>

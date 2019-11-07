@@ -153,6 +153,6 @@ function createDb(moduleID) {
     });
 }
 
-createDb('appendicitis');
-createDb('megacolon');
+// createDb('appendicitis');
+// createDb('megacolon');
 createDb('cardioidAnastomosis');
