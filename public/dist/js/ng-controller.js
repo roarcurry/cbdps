@@ -608,7 +608,7 @@ app.controller('patientListCtrl', function($scope, $state, $rootScope, $statePar
 
     //前往新建患者
     $scope.toNewPatient = function(){
-        $state.go("newPatient", {"index":$scope.moduleIndex});
+        $state.go("newPatient", {"index":$scope.moduleIndex, moduleList:$scope.moduleList});
     };
 
     //刷新patientList
@@ -798,26 +798,7 @@ app.controller('patientListCtrl', function($scope, $state, $rootScope, $statePar
 
 app.controller('newPatientCtrl', function($scope, $state, $rootScope, $stateParams) {
     $scope.moduleIndex = $stateParams.index;
-
-    //获取模块列表 project list
-    dao.getModuleList(function(result){
-        if(result.status=='1'){//成功
-            $scope.moduleList = result.data;
-            $scope.patient.module = $scope.moduleList[$scope.moduleIndex].name;
-            $scope.$apply();
-        }else if(result.status=='0'){//失败
-            //弹出警告框
-            $rootScope.alert = {};
-            $rootScope.alert.title = result.msg;
-            $rootScope.alert.content = result.err;
-            $rootScope.$apply();
-            $('#alertDanger').fadeIn(function () {
-                setTimeout(function(){
-                    $('#alertDanger').fadeOut();
-                }, 3000);
-            });
-        }
-    });
+    $scope.moduleList = $stateParams.moduleList;
 
 	// 新增患者
 	$scope.newPatient = function(inValid){

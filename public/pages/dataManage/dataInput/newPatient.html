@@ -36,7 +36,7 @@
 										<div class="form-group" ng-class="patientForm.module.$dirty &amp;&amp; patientForm.module.$invalid?'form-group has-error':'form-group'">
 											<label for="module" class="col-sm-2 control-label">疾病模块</label>
 											<div class="col-sm-6">
-												<input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="module" placeholder="疾病模块" name="module" ng-model="patient.module" ng-maxlength="50" required="" disabled>
+												<input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="module" placeholder="疾病模块" name="module" ng-model="patient.module" ng-init="patient.module=moduleList[moduleIndex].name" ng-maxlength="50" required="" disabled>
 												<div class="error ng-active ng-hide" ng-messages="patientForm.module.$error" ng-show="patientForm.module.$dirty &amp;&amp; patientForm.module.$invalid">
 													<!-- ngMessage: required --><div ng-message="required" class="ng-scope">必须填写</div>
 												</div>

@@ -13,7 +13,7 @@ app.run(function($rootScope, $state){
                 location.reload();
 			}
 		})
-	}
+	};
 
     $(function(){
         $(document).ajaxStart(function(){
@@ -81,7 +81,7 @@ app.config(function($stateProvider, $locationProvider){
             cache:'false',
             templateUrl:'/pages/dataManage/dataInput/newPatient.html',
             controller:'newPatientCtrl',
-            params:{index:null}
+            params:{index:null, moduleList:null}
         })
         .state('patientEdit',{
             url:'/patientEdit/:moduleID/:binglihao',
