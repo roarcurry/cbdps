@@ -902,7 +902,7 @@
         <name>术后随访信息录入口</name>
 
         <children>
-            <name>术后一个月随访信息</name>
+            <name>术后一个月</name>
             <id>cardioidAnastomosis_06_sfxx</id>
             <type>form</type>
 
@@ -1035,9 +1035,11 @@
                 <type>title</type>
             </leaf>
             <leaf>
-                <name>RAIR反射阈值（mL）</name>
-                <id>RAIRReflectionThreshold_oneMonth</id>
-                <type>text</type>
+                <name>RAIR</name>
+                <id>RAIR_oneMonth</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1135,7 +1137,7 @@
         </children>
 
         <children>
-            <name>术后三个月随访信息</name>
+            <name>术后三个月</name>
             <id>cardioidAnastomosis_06_threeMonth_sfxx</id>
             <type>form</type>
 
@@ -1267,9 +1269,11 @@
                 <type>title</type>
             </leaf>
             <leaf>
-                <name>RAIR反射阈值（mL）</name>
-                <id>RAIRReflectionThreshold_threeMonth</id>
-                <type>text</type>
+                <name>RAIR</name>
+                <id>RAIR_threeMonth</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1367,7 +1371,7 @@
         </children>
 
         <children>
-            <name>术后六个月随访信息</name>
+            <name>术后六个月</name>
             <id>cardioidAnastomosis_06_sixMonth_sfxx</id>
             <type>form</type>
 
@@ -1499,9 +1503,11 @@
                 <type>title</type>
             </leaf>
             <leaf>
-                <name>RAIR反射阈值（mL）</name>
-                <id>RAIRReflectionThreshold_sixMonth</id>
-                <type>text</type>
+                <name>RAIR</name>
+                <id>RAIR_sixMonth</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
                 <col>12</col>
             </leaf>
             <leaf>
@@ -1600,7 +1606,7 @@
         </children>
 
         <children>
-            <name>术后十二个月随访信息</name>
+            <name>术后十二个月</name>
             <id>cardioidAnastomosis_06_twelveMonth_sfxx</id>
             <type>form</type>
 
@@ -1732,9 +1738,11 @@
                 <type>title</type>
             </leaf>
             <leaf>
-                <name>RAIR反射阈值（mL）</name>
-                <id>RAIRReflectionThreshold_twelveMonth</id>
-                <type>text</type>
+                <name>RAIR</name>
+                <id>RAIR_twelveMonth</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
                 <col>12</col>
             </leaf>
             <leaf>
