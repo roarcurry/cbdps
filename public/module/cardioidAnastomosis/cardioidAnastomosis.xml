@@ -902,7 +902,7 @@
         <name>术后随访信息录入口</name>
 
         <children>
-            <name>术后一个月</name>
+            <name>术后一个月随访信息</name>
             <id>cardioidAnastomosis_06_sfxx</id>
             <type>form</type>
 
@@ -1136,242 +1136,9 @@
 			</leaf>
         </children>
 
-        <children>
-            <name>术后三个月</name>
-            <id>cardioidAnastomosis_06_threeMonth_sfxx</id>
-            <type>form</type>
-
-            <leaf>
-                <name>术后三个月</name>
-                <type>title</type>
-            </leaf>
-
-            <leaf>
-                <name>年龄（）岁</name>
-                <id>age_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-
-            <leaf>
-                <name>并发症</name>
-                <type>title</type>
-            </leaf>
-
-            <leaf>
-                <name>并发症</name>
-                <id>Complication_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>Complication_threeMonth_checkbox</id>
-                <type>checkbox</type>
-                <value>切口感染</value>
-                <value>吻合口瘘</value>
-                <value>吻合口狭窄</value>
-                <value>小肠结肠炎</value>
-                <value>污粪</value>
-                <value>便秘复发</value>
-                <value>其他</value>
-                <preID>Complication_threeMonth</preID>
-                <preValue>有</preValue>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>Complication_threeMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>Complication_threeMonth_checkbox</preID>
-                <preValue>其他</preValue>
-            </leaf>
-            <leaf>
-                <name>术后肠炎发作次数</name>
-                <id>NumberOfEpisodesOfEnteritis_threeMonth</id>
-                <type>select</type>
-                <value>0次</value>
-                <value>1-3次</value>
-                <value>>3次</value>
-                <col>12</col>
-            </leaf>
-
-            <leaf>
-                <name>肠功能指数（Bowel function score）</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>控制大便的能力</name>
-                <id>defecateControl_3month</id>
-                <type>select</type>
-                <value>良好</value>
-                <value>偶尔无法控制，1周小于1次</value>
-                <value>经常无法控制，1周大于1次</value>
-                <value>完全无法控制</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>排便前是否有意识</name>
-                <id>defecateWithConsciousness_3month</id>
-                <type>select</type>
-                <value>良好</value>
-                <value>大多数时候有意识</value>
-                <value>大多数时候无意识</value>
-                <value>完全无意识</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>污粪</name>
-                <id>dirtyManure_3month</id>
-                <type>select</type>
-                <value>无</value>
-                <value>每周小于1次</value>
-                <value>每周大于1次</value>
-                <value>每天都有</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>排便频率</name>
-                <id>dirtyFrequency_3month</id>
-                <type>select</type>
-                <value>每隔一天至一天两次</value>
-                <value>每天大于两次</value>
-                <value>大于两天一次</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>便秘</name>
-                <id>astriction_3month</id>
-                <type>select</type>
-                <value>无</value>
-                <value>有便秘，可以通过饮食调整</value>
-                <value>有便秘，可以通过药物调整</value>
-                <value>有便秘，需要洗肠</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>社会问题</name>
-                <id>socialProblem_3month</id>
-                <type>select</type>
-                <value>无</value>
-                <value>身上有异味</value>
-                <value>社会活动受限</value>
-                <value>严重的心理问题</value>
-                <col>12</col>
-            </leaf>
-
-            <leaf>
-                <name>直肠肛管测压检查</name>
-                <type>title</type>
-            </leaf>
-            <leaf>
-                <name>RAIR</name>
-                <id>RAIR_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>肛管静息压</name>
-                <id>AnalRestingPressure_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-            <leaf>
-                <name>肛管高压带长度</name>
-                <id>LengthOfAnalHighPressureZone_threeMonth</id>
-                <type>text</type>
-                <col>12</col>
-            </leaf>
-			<leaf>
-				<name>最大压榨压(mmHg)</name>
-				<id>maxPressPressure_threeMonth</id>
-				<type>text</type>
-				<col>12</col>
-			</leaf>
-			<leaf>
-				<name>初次感觉压(mmHg)</name>
-				<id>firstSensoryPressure_threeMonth</id>
-				<type>text</type>
-				<col>12</col>
-			</leaf>
-			<leaf>
-				<name>初次排便压(mmHg)</name>
-				<id>firstDefecationPressure_threeMonth</id>
-				<type>text</type>
-				<col>12</col>
-			</leaf>
-			<leaf>
-				<name>强烈排便压(mmHg)</name>
-				<id>strongDefecationPressure_threeMonth</id>
-				<type>text</type>
-				<col>12</col>
-			</leaf>
-			<leaf>
-				<name>最大容受压(mmHg)</name>
-				<id>maxCompressionPressing_threeMonth</id>
-				<type>text</type>
-				<col>12</col>
-			</leaf>
-
-            <leaf>
-                <name>再入院/再手术</name>
-                <type>title</type>
-            </leaf>
-
-            <leaf>
-                <name>再入院</name>
-                <id>readmission_after_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>readmission_after_threeMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>readmission_after_threeMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-
-            <leaf>
-                <name>再手术</name>
-                <id>reoperation_after_threeMonth</id>
-                <type>select</type>
-                <value>有</value>
-                <value>无</value>
-                <col>12</col>
-                <required>true</required>
-            </leaf>
-            <leaf>
-                <name></name>
-                <id>reoperation_after_threeMonth_textarea</id>
-                <type>textarea</type>
-                <col>12</col>
-                <preID>reoperation_after_threeMonth</preID>
-                <preValue>有</preValue>
-            </leaf>
-
-
-			<leaf>
-				<name>其他</name>
-				<id>other_threeMonth</id>
-				<type>textarea</type>
-				<col>12</col>
-				<required>true</required>
-			</leaf>
-        </children>
 
         <children>
-            <name>术后六个月</name>
+            <name>术后六个月随访信息</name>
             <id>cardioidAnastomosis_06_sixMonth_sfxx</id>
             <type>form</type>
 
@@ -1606,7 +1373,7 @@
         </children>
 
         <children>
-            <name>术后十二个月</name>
+            <name>术后十二个月随访信息</name>
             <id>cardioidAnastomosis_06_twelveMonth_sfxx</id>
             <type>form</type>
 
@@ -1838,6 +1605,240 @@
 				<col>12</col>
 				<required>true</required>
 			</leaf>
+        </children>
+
+        <children>
+            <name>术后二十四个月随访信息</name>
+            <id>cardioidAnastomosis_06_24m_sfxx</id>
+            <type>form</type>
+
+            <leaf>
+                <name>术后二十四个月</name>
+                <type>title</type>
+            </leaf>
+
+            <leaf>
+                <name>年龄（）岁</name>
+                <id>age_24m</id>
+                <type>text</type>
+                <col>12</col>
+                <required>true</required>
+            </leaf>
+
+            <leaf>
+                <name>并发症</name>
+                <type>title</type>
+            </leaf>
+
+            <leaf>
+                <name>并发症</name>
+                <id>Complication_24m</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name></name>
+                <id>Complication_24m_checkbox</id>
+                <type>checkbox</type>
+                <value>切口感染</value>
+                <value>吻合口瘘</value>
+                <value>吻合口狭窄</value>
+                <value>小肠结肠炎</value>
+                <value>污粪</value>
+                <value>便秘复发</value>
+                <value>其他</value>
+                <preID>Complication_24m</preID>
+                <preValue>有</preValue>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name></name>
+                <id>Complication_24m_textarea</id>
+                <type>textarea</type>
+                <col>12</col>
+                <preID>Complication_24m_checkbox</preID>
+                <preValue>其他</preValue>
+            </leaf>
+            <leaf>
+                <name>术后肠炎发作次数</name>
+                <id>NumberOfEpisodesOfEnteritis_24m</id>
+                <type>select</type>
+                <value>0次</value>
+                <value>1-3次</value>
+                <value>>3次</value>
+                <col>12</col>
+            </leaf>
+
+            <leaf>
+                <name>肠功能指数（Bowel function score）</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>控制大便的能力</name>
+                <id>defecateControl_3month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>偶尔无法控制，1周小于1次</value>
+                <value>经常无法控制，1周大于1次</value>
+                <value>完全无法控制</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便前是否有意识</name>
+                <id>defecateWithConsciousness_3month</id>
+                <type>select</type>
+                <value>良好</value>
+                <value>大多数时候有意识</value>
+                <value>大多数时候无意识</value>
+                <value>完全无意识</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>污粪</name>
+                <id>dirtyManure_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>每周小于1次</value>
+                <value>每周大于1次</value>
+                <value>每天都有</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>排便频率</name>
+                <id>dirtyFrequency_3month</id>
+                <type>select</type>
+                <value>每隔一天至一天两次</value>
+                <value>每天大于两次</value>
+                <value>大于两天一次</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>便秘</name>
+                <id>astriction_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>有便秘，可以通过饮食调整</value>
+                <value>有便秘，可以通过药物调整</value>
+                <value>有便秘，需要洗肠</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>社会问题</name>
+                <id>socialProblem_3month</id>
+                <type>select</type>
+                <value>无</value>
+                <value>身上有异味</value>
+                <value>社会活动受限</value>
+                <value>严重的心理问题</value>
+                <col>12</col>
+            </leaf>
+
+            <leaf>
+                <name>直肠肛管测压检查</name>
+                <type>title</type>
+            </leaf>
+            <leaf>
+                <name>RAIR</name>
+                <id>RAIR_24m</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>肛管静息压</name>
+                <id>AnalRestingPressure_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>肛管高压带长度</name>
+                <id>LengthOfAnalHighPressureZone_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>最大压榨压(mmHg)</name>
+                <id>maxPressPressure_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>初次感觉压(mmHg)</name>
+                <id>firstSensoryPressure_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>初次排便压(mmHg)</name>
+                <id>firstDefecationPressure_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>强烈排便压(mmHg)</name>
+                <id>strongDefecationPressure_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+            <leaf>
+                <name>最大容受压(mmHg)</name>
+                <id>maxCompressionPressing_24m</id>
+                <type>text</type>
+                <col>12</col>
+            </leaf>
+
+            <leaf>
+                <name>再入院/再手术</name>
+                <type>title</type>
+            </leaf>
+
+            <leaf>
+                <name>再入院</name>
+                <id>readmission_after_24m</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
+                <col>12</col>
+                <required>true</required>
+            </leaf>
+            <leaf>
+                <name></name>
+                <id>readmission_after_24m_textarea</id>
+                <type>textarea</type>
+                <col>12</col>
+                <preID>readmission_after_24m</preID>
+                <preValue>有</preValue>
+            </leaf>
+
+            <leaf>
+                <name>再手术</name>
+                <id>reoperation_after_24m</id>
+                <type>select</type>
+                <value>有</value>
+                <value>无</value>
+                <col>12</col>
+                <required>true</required>
+            </leaf>
+            <leaf>
+                <name></name>
+                <id>reoperation_after_24m_textarea</id>
+                <type>textarea</type>
+                <col>12</col>
+                <preID>reoperation_after_24m</preID>
+                <preValue>有</preValue>
+            </leaf>
+
+
+            <leaf>
+                <name>其他</name>
+                <id>other_24m</id>
+                <type>textarea</type>
+                <col>12</col>
+                <required>true</required>
+            </leaf>
         </children>
     </node>
 
