@@ -59,6 +59,8 @@ function createDb(moduleID) {
                                 childchildren.leaf.forEach(function(leaf){
                                     if(leaf.type=='text'){
                                         sql += leaf.id + ' text,';
+                                    }else if(leaf.type=='number'){
+                                        sql += leaf.id + ' int,';
                                     }else if(leaf.type=='textarea'){
                                         sql += leaf.id + ' text,';
                                     }else if(leaf.type=='radio'){
@@ -89,7 +91,7 @@ function createDb(moduleID) {
                                 if(leaf.type=='text'){
                                     sql += leaf.id + ' text,';
                                 }else if(leaf.type=='number'){
-                                    sql += leaf.id + ' text,';
+                                    sql += leaf.id + ' int,';
                                 }else if(leaf.type=='textarea'){
                                     sql += leaf.id + ' text,';
                                 }else if(leaf.type=='radio'){
@@ -153,6 +155,6 @@ function createDb(moduleID) {
     });
 }
 
-// createDb('appendicitis');
-// createDb('megacolon');
+createDb('appendicitis');
+createDb('megacolon');
 createDb('cardioidAnastomosis');

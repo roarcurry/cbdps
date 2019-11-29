@@ -1928,7 +1928,9 @@ app.controller('patientEditCtrl', function($scope, $stateParams, $rootScope, $st
             }
             return flag;
         }else{
-            if(value=='') return true;
+            if(!value) {
+                return true;
+            }
             return false;
         }
     };

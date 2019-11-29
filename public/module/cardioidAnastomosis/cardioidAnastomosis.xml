@@ -92,8 +92,8 @@
                 <type>form</type>
                 <leaf>
                     <name>患者住院号</name>
-                    <id>patient number</id>
-                    <type>number</type>
+                    <id>patientNumber</id>
+                    <type>text</type>
                     <col>12</col>
                     <required>true</required>
                 </leaf>
