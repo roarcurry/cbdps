@@ -489,6 +489,7 @@ app.controller('patientListCtrl', function($scope, $state, $rootScope, $statePar
 	});
 	socket.on('patientListUpdate',function(msg){
 		console.log(msg);
+		console.log(new Date().getTime());
 		$scope.refresh();
 	});
 	socket.on('leave',function(msg){
@@ -628,7 +629,8 @@ app.controller('patientListCtrl', function($scope, $state, $rootScope, $statePar
 
     //刷新patientList
     $scope.refresh = function(){
-        $state.go('patientList', {"index":$scope.moduleIndex}, {reload: true});
+	    socket.close();
+	    $state.go('patientList', {"index":$scope.moduleIndex}, {reload: true});
     };
 
     //前往查看病历
