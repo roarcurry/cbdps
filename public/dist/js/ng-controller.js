@@ -480,6 +480,21 @@ app.controller('dataItemManageCtrl', function($scope, $rootScope, $state, $state
 app.controller('patientListCtrl', function($scope, $state, $rootScope, $stateParams) {
     $scope.moduleIndex = $stateParams.index==null ? '0' : $stateParams.index;
 
+	//socket.io
+	var socket=io.connect(window.location.host);//与服务器进行连接
+
+	//接收来自服务端的信息事件
+	socket.on('hi',function(msg){
+		console.log(msg);
+	});
+	socket.on('patientListUpdate',function(msg){
+		console.log(msg);
+		$scope.refresh();
+	});
+	socket.on('leave',function(msg){
+		console.log(msg);
+	});
+
     //获取模块列表 project list
     dao.getModuleList(function(result){
         if(result.status=='1'){//成功

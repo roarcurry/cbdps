@@ -9,6 +9,7 @@ var uuid = require('uuid');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var rimraf = require('rimraf');
+var io = require('../models/socketio');
 
 //项目管理project
 router.post('/getModuleList', function(req, res, next) {
@@ -196,6 +197,8 @@ router.post('/newPatient', function(req, res, next) {
                     var json = {'status':'1','msg':'新建病历成功！','fenzu':patient.fenzu};
                     console.log(json);
                     res.json(json);
+
+                    io.emit('patientListUpdate', '病例列表更新');
                 });
 
             });
@@ -285,6 +288,8 @@ router.post('/deletePatient', function(req, res, next) {
                     var json = {'status': '1', 'msg': '删除病历成功！'};
                     console.log(json);
                     res.json(json);
+
+	                io.emit('patientListUpdate', '病例列表更新');
                 }
             });
         });
@@ -320,6 +325,8 @@ router.post('/auditApply', function(req, res, next) {
                 var json = {'status': '1', 'msg': '提交病历成功！'};
                 console.log(json);
                 res.json(json);
+
+	            io.emit('patientListUpdate', '病例列表更新');
             });
         });
     }
@@ -352,6 +359,8 @@ router.post('/auditBack', function(req, res, next) {
                 var json = {'status': '1', 'msg': '撤回提交成功！'};
                 console.log(json);
                 res.json(json);
+
+	            io.emit('patientListUpdate', '病例列表更新');
             });
         });
     }
@@ -385,6 +394,8 @@ router.post('/auditPass', function(req, res, next) {
                 var json = {'status': '1', 'msg': '审核成功！'};
                 console.log(json);
                 res.json(json);
+
+	            io.emit('patientListUpdate', '病例列表更新');
             });
         });
     }
@@ -417,6 +428,8 @@ router.post('/auditFail', function(req, res, next) {
                 var json = {'status': '1', 'msg': '否决成功！'};
                 console.log(json);
                 res.json(json);
+
+	            io.emit('patientListUpdate', '病例列表更新');
             });
         });
     }
