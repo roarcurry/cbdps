@@ -3,3 +3,4 @@
 /.deploy_git
 /public/upload
 /public/data
+/package-lock.json
